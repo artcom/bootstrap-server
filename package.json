@@ -1,0 +1,31 @@
+{
+  "name": "bootstrap-server",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A HTTP server serving basic bootstrap data as JSON object.",
+  "scripts": {
+    "lint": "eslint --ext .ts src --fix",
+    "compile": "tsc",
+    "compile:watch": "tsc -w",
+    "start": "npm run compile && node lib/main.js"
+  },
+  "engines": {
+    "node": "12.12.0"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/bunyan": "^1.8.6",
+    "@types/express": "^4.17.1",
+    "@types/node": "^12.7.12",
+    "bunyan": "^1.8.12",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "typescript": "^3.6.4"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^2.3.3",
+    "eslint": "^6.5.1",
+    "eslint-config-artcom": "^0.10.1",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
