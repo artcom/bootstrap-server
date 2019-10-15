@@ -1,6 +1,6 @@
 # Bootstrap Server
 
-A HTTP server serving basic bootstrap data as JSON object.
+A HTTP server serving basic bootstrap data as JSON object. NodeJS services can process the bootstrap data with the [bootstrap client](https://github.com/artcom/bootstrap-server).
 
 ## Local Usage
 
