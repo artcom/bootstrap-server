@@ -9,7 +9,9 @@ const BOOTSTRAP_DATA = {
   httpBrokerUri: process.env.HTTP_BROKER_URI,
   tcpBrokerUri: process.env.TCP_BROKER_URI,
   wsBrokerUri: process.env.WS_BROKER_URI,
-  configServerUri: process.env.CONFIG_SERVER_URI
+  configServerUri: process.env.CONFIG_SERVER_URI,
+  tourAdministratorApiUri: process.env.TOUR_ADMINISTRATOR_API_URI,
+  storageServerUri: process.env.STORAGE_SERVER_URI
 }
 
 const logger = Logger.createLogger({
