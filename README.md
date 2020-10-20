@@ -13,6 +13,8 @@ export HTTP_BROKER_URI=<httpBrokerUri>
 export TCP_BROKER_URI=<tcpBrokerUri>
 export WS_BROKER_URI=<wsBrokerUri>
 export CONFIG_SERVER_URI=<configServerUri>
+export TOUR_ADMINISTRATOR_API_URI=<tourAdministratorApiUri>
+export STORAGE_SERVER_URI=<storageServerUri>
 npm start | bunyan
 ```
 
@@ -29,10 +31,14 @@ The bootstrap data is structured as follows:
   tcpBrokerUri: string,
   wsBrokerUri: string,
   configServerUri: string,
+  tourAdministratorApiUri: string,
+  storageServerUri: string,
   deviceTopic: string,
   device: string
 }
 ```
+
+**Note:** Properties which are not exported as environment variables are omitted from the bootstrap data.
 
 ## Deployment
 
