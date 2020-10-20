@@ -18,6 +18,22 @@ npm start | bunyan
 
 The bootstrap data can now be queried at `http://localhost:3000/<device>`.
 
+## Bootstrap Data
+
+The bootstrap data is structured as follows:
+
+```typescript
+{
+  backendHost: string,
+  httpBrokerUri: string,
+  tcpBrokerUri: string,
+  wsBrokerUri: string,
+  configServerUri: string,
+  deviceTopic: string,
+  device: string
+}
+```
+
 ## Deployment
 
 The service can be deployed with Dokku.
