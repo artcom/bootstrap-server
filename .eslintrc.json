@@ -1,10 +1,12 @@
 {
-  "extends": "artcom",
-  "rules": {
-    "no-unused-vars": "off"
-  },
-  "parser": "@typescript-eslint/parser",
+  "root": true,
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "ecmaVersion": 2020
+  },
+  "plugins": ["import"],
+  "extends": ["eslint:recommended", "plugin:import/recommended", "prettier"],
+  "env": {
+    "node": true,
+    "es2020": true
   }
 }
