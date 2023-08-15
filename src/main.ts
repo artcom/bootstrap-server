@@ -11,13 +11,16 @@ const BOOTSTRAP_DATA = {
   wsBrokerUri: process.env.WS_BROKER_URI,
   configServerUri: process.env.CONFIG_SERVER_URI,
   tourAdministratorApiUri: process.env.TOUR_ADMINISTRATOR_API_URI,
-  storageServerUri: process.env.STORAGE_SERVER_URI
+  storageServerUri: process.env.STORAGE_SERVER_URI,
+  outsideAccessUri: process.env.OUTSIDE_ACCESS_URI,
+  httpOutsideAccessBridgeUri: process.env.HTTP_OUTSIDE_ACCESS_BRIDGE_URI,
+  wsOutsideAccessBridgeUri: process.env.WS_OUTSIDE_ACCESS_BRIDGE_URI,
 }
 
 const logger = Logger.createLogger({
   name: "bootstrapServer",
   level: "debug",
-  serializers: { error: Logger.stdSerializers.err }
+  serializers: { error: Logger.stdSerializers.err },
 })
 
 function bootstrap(request: express.Request, response: express.Response) {
@@ -28,7 +31,7 @@ function bootstrap(request: express.Request, response: express.Response) {
   response.json({
     ...BOOTSTRAP_DATA,
     deviceTopic: `devices/${device}`,
-    device
+    device,
   })
 }
 
