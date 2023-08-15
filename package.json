@@ -10,7 +10,7 @@
     "start": "npm run compile && node lib/main.js"
   },
   "engines": {
-    "node": "18.17.1"
+    "node": "18.17"
   },
   "dependencies": {
     "@types/bunyan": "^1.8.8",
