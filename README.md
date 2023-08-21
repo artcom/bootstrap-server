@@ -15,9 +15,6 @@ export WS_BROKER_URI=<wsBrokerUri>
 export CONFIG_SERVER_URI=<configServerUri>
 export TOUR_ADMINISTRATOR_API_URI=<tourAdministratorApiUri>
 export STORAGE_SERVER_URI=<storageServerUri>
-export OUTSIDE_ACCESS_URI=<outsideAccessUri>
-export HTTP_OUTSIDE_ACCESS_BRIDGE_URI=<httpOutsideAccessBridgeUri>
-export WS_OUTSIDE_ACCESS_BRIDGE_URI=<wsOutsideAccessBridgeUri>
 npm start | bunyan
 ```
 
@@ -36,9 +33,6 @@ The bootstrap data is structured as follows:
   configServerUri: string,
   tourAdministratorApiUri: string,
   storageServerUri: string,
-  outsideAccessUri: string,
-  httpOutsideAccessBridgeUri: string,
-  wsOutsideAccessBridgeUri: string,
   deviceTopic: string,
   device: string
 }

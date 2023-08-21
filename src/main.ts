@@ -12,9 +12,6 @@ const BOOTSTRAP_DATA = {
   configServerUri: process.env.CONFIG_SERVER_URI,
   tourAdministratorApiUri: process.env.TOUR_ADMINISTRATOR_API_URI,
   storageServerUri: process.env.STORAGE_SERVER_URI,
-  outsideAccessUri: process.env.OUTSIDE_ACCESS_URI,
-  httpOutsideAccessBridgeUri: process.env.HTTP_OUTSIDE_ACCESS_BRIDGE_URI,
-  wsOutsideAccessBridgeUri: process.env.WS_OUTSIDE_ACCESS_BRIDGE_URI,
 }
 
 const logger = Logger.createLogger({
