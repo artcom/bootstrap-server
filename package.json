@@ -1,7 +1,7 @@
 {
   "name": "bootstrap-server",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A HTTP server serving basic bootstrap data as JSON object.",
   "scripts": {
     "lint": "eslint --ext .ts src --fix",
