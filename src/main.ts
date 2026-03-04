@@ -38,6 +38,17 @@ app.set("trust proxy", true)
 app.get("/.health", (req, res) => res.sendStatus(200))
 app.get("/:device", bootstrap)
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   logger.info({ port: PORT, bootstrapData: BOOTSTRAP_DATA }, "Bootstrap Server up and running")
 })
+
+const gracefulShutdown = () => {
+  logger.info("Received shutdown signal, closing server")
+  server.close(() => {
+    logger.info("Server closed")
+    process.exit(0)
+  })
+}
+
+process.on("SIGINT", gracefulShutdown)
+process.on("SIGTERM", gracefulShutdown)
