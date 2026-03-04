@@ -35,6 +35,7 @@ function bootstrap(request: express.Request, response: express.Response) {
 const app = express()
 app.use(cors())
 app.set("trust proxy", true)
+app.get("/.health", (req, res) => res.sendStatus(200))
 app.get("/:device", bootstrap)
 
 app.listen(PORT, () => {
